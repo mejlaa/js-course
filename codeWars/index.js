@@ -87,4 +87,33 @@ const doubleChar = str => {
   return newStrArr.join('');
 };
 
-console.log(doubleChar('Mmejla'));
+// console.log(doubleChar('Mmejla'));
+
+const bmi = (weight, height) => {
+  let bmi = weight / (height * height);
+
+  if (bmi <= 18.5) return 'Underweight';
+  if (bmi <= 25) return 'Normal';
+  if (bmi <= 30) return 'Overweight';
+  if (bmi > 30) return 'Obese';
+};
+
+// console.log(bmi(73, 1.78));
+
+const points = games => {
+  let sum = 0;
+  for (let i = 0; i < games.length; i++) {
+    if (games[i][0] > games[i][2]) sum += 3;
+    if (games[i][0] == games[i][2]) sum += 1;
+  }
+  return sum;
+};
+
+// function greet(name) {
+//   str = `Hello, ${name} how are you doing today?`;
+
+//   return str;
+// }
+const greet = name => `Hello, ${name} how are you doing today?`;
+
+// console.log(greet('Mejla'));
