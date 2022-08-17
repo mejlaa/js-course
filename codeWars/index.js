@@ -65,4 +65,26 @@ const reverse = str => {
   return str.split('').reverse().join('');
 };
 
-console.log(reverse('mejla'));
+// console.log(reverse('mejla'));
+
+//Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+const doubleChar = str => {
+  // // Your code here
+  const strArr = str.split('');
+
+  // return newStrArr.join('');
+
+  // const newStr = strArr.filter((item, index) => strArr.indexOf(item) === index);
+
+  // return newStr.join('');
+  const newStrArr = [];
+  for (let i = 0; i < strArr.length; i++) {
+    newStrArr.push(strArr[i]);
+    newStrArr.push(strArr[i]);
+  }
+
+  return newStrArr.join('');
+};
+
+console.log(doubleChar('Mmejla'));
