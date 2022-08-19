@@ -117,3 +117,45 @@ const points = games => {
 const greet = name => `Hello, ${name} how are you doing today?`;
 
 // console.log(greet('Mejla'));
+
+const repeatString = (n, s) => {
+  return s.repeat(n);
+};
+
+// console.log(repeatString(3, ' mejla'));
+
+const openOrSenior1 = data => {
+  return data.map(member => {
+    return member[0] >= 55 && member[1] > 7 ? 'Senior' : 'Open';
+  });
+};
+
+const openOrSenior = data => {
+  let output = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][0] >= 55 && data[i][1] > 7) output.push('Senior');
+    else output.push('Open');
+  }
+
+  return output;
+};
+
+// console.log(
+//   openOrSenior([
+//     [18, 20],
+//     [45, 2],
+//     [61, 12],
+//     [37, 6],
+//     [21, 21],
+//     [78, 9],
+//   ])
+// );
+
+const summation = num => {
+  let sum = 0;
+  for (let i = 0; i <= num; i++) sum += i;
+
+  return sum;
+};
+
+// console.log(summation(4));
