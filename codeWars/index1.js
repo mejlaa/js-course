@@ -117,3 +117,20 @@ const solution1 = str => {
 
 // console.log(solution('mejlaMejlaUgljaninSuljovic'));
 // console.log(solution1('mejla Mejla Ugljanin Suljovic'));
+
+const generateHashtag = str => {
+  if (str.trim() === '') return false;
+
+  const stringWithCamelCase = str
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('');
+
+  const stringWithHashtag = `#${stringWithCamelCase.trim()}`;
+
+  return stringWithHashtag.length > 140 ? false : stringWithHashtag;
+};
+
+// console.log(generateHashtag(' mejla mmej mejsu   '));
+
+//pangram
