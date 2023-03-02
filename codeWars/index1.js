@@ -93,3 +93,27 @@ const arrayDiff = (a, b) => {
 };
 
 // console.log(arrayDiff([1, 2, 3], [3]));
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+function solution(string) {
+  return string.split(/\s+|\_+|(?=[A-Z])/gm).join(' ');
+}
+
+const solution1 = str => {
+  str = str.split('').map(el => {
+    if (el == el.toUpperCase()) {
+      el = ' ' + el;
+    }
+    return el;
+  });
+  return str.join('');
+};
+
+// console.log(solution('mejlaMejlaUgljaninSuljovic'));
+// console.log(solution1('mejla Mejla Ugljanin Suljovic'));
