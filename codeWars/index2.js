@@ -71,3 +71,17 @@ const isPrime = num => {
 };
 
 // console.log(isPrime(29));
+
+//count characters in your string
+
+const count = str => {
+  const count = {};
+
+  str.split('').forEach(char => {
+    count[char] = count[char] ? count[char] + 1 : 1;
+  });
+
+  return count;
+};
+
+console.log(count('banana'));
