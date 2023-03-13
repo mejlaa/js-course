@@ -147,3 +147,13 @@ runOnce();
 
 (() => console.log('This will ALSO never run again!'))();
 */
+
+const flight = 'LH234';
+const jonas = {
+  name: 'Jonas Schmedtmann',
+  passport: '24739478384',
+};
+
+const checkIn = function (flightNum, passenger) {};
+
+checkIn(flight, jonas);
