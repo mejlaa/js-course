@@ -154,6 +154,42 @@ const jonas = {
   passport: '24739478384',
 };
 
-const checkIn = function (flightNum, passenger) {};
+const checkIn = function (flightNum, passenger) {
+  flightNum = 'LH999';
+  passenger.name = 'Mr. ' + passenger.name;
 
-checkIn(flight, jonas);
+  if (passenger.passport === 24739478384) {
+    alert('checked in');
+  } else {
+    alert('wrong passport');
+  }
+};
+
+// checkIn(flight, jonas);
+
+const newPassport = function (person) {
+  person.passenger = Math.trunc(Math.random() * 10000000000);
+};
+
+// newPassport(jonas);
+// checkIn(flight, jonas);
+
+//replace space
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...other] = str.split(' ');
+  return [first.toUpperCase(), ...other].join(' ');
+};
+
+//higher-order function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed bt: ${fn.name}`);
+};
+
+transformer(`JavaScript is the best!`, upperFirstWord);
