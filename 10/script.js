@@ -243,3 +243,35 @@ console.log(lufthansa);
 
 lufthansa.book(239, 'Mejla Ugljanin Suljovic');
 lufthansa.book(239, 'Suad Suljovic');
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+//Does not work
+//book(23, 'Sarah W)
+
+//Call method
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+
+book.call(lufthansa, 234, 'Mary Cooper');
+console.log(lufthansa);
+
+//apply method (not used in moder js, instead we use ...data(spread))
+const flightData = [583, 'Mejla'];
+book.apply(eurowings, flightData);
+
+book.call(eurowings, ...flightData);
+
+//immediately invoked fn expressions
+
+(function () {
+  console.log('This will never run again');
+})();
+
+(() => console.log('This will ALSO never run again'))();
