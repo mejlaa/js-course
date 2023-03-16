@@ -1,0 +1,3 @@
+//destructuring arrays
+
+//destructuring objects
