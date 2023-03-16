@@ -192,4 +192,54 @@ const transformer = function (str, fn) {
   console.log(`Transformed bt: ${fn.name}`);
 };
 
-transformer(`JavaScript is the best!`, upperFirstWord);
+// transformer(`JavaScript is the best!`, upperFirstWord);
+// transformer(`JavaScript is the best!`, oneWord);
+
+const high5 = function () {
+  console.log('👋🏼');
+};
+
+// document.body.addEventListener('click', high5);
+
+// ['mejla', 'suad', 'suljovic'].forEach(high5);
+
+//FN RETURNING FN
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('hey');
+// greeterHey('mejla');
+// greeterHey('suad');
+
+// greet('hello')('mejla');
+
+// const greet1 = greeting => {
+//   return name => {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+const greet1 = greeting => name => console.log(`${greeting} ${name}`);
+
+// greet1('hejhej')('mejla');
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  //book: function() {}
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `{this.iataCode}${flightNum}`, name });
+  },
+};
+console.log(lufthansa);
+
+lufthansa.book(239, 'Mejla Ugljanin Suljovic');
+lufthansa.book(239, 'Suad Suljovic');
