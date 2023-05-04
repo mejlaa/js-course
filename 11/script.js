@@ -34,7 +34,7 @@ const account4 = {
 };
 
 const accounts = [account1, account2, account3, account4];
-/*
+
 // Elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
@@ -60,7 +60,6 @@ const inputTransferAmount = document.querySelector('.form__input--amount');
 const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
-*/
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
