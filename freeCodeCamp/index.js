@@ -307,3 +307,58 @@ testObj['12'] = 'Ugljanin';
 
 testObj['22'] = 'Suljovic';
 // console.log(testObj);
+
+//using object instead switch/case or if/else statement
+/*
+switch (val) {
+  case 'alpha':
+    result = 'Adams';
+    break;
+  case 'bravo':
+    result = 'Boston';
+    break;
+  case 'charlie':
+    result = 'Chicago';
+    break;
+  case 'delta':
+    result = 'Denver';
+    break;
+  case 'echo':
+    result = 'Easy';
+    break;
+  case 'foxtrot':
+    result = 'Frank';
+}
+*/
+
+function phoneticLookup(val) {
+  let result = '';
+
+  const lookup = {
+    alpha: 'Adams',
+    bravo: 'Boston',
+    charlie: 'Chicago',
+    delta: 'Denver',
+    echo: 'Easy',
+    foxTrot: 'Frank',
+  };
+
+  result = lookup[val];
+
+  return result;
+}
+
+const lookup = {
+  alpha: 'Adams',
+  bravo: 'Boston',
+  charlie: 'Chicago',
+  delta: 'Denver',
+  echo: 'Easy',
+  foxTrot: 'Frank',
+};
+
+function checkObj(obj, checkProp) {
+  if (obj.hasOwnProperty(checkProp)) return obj[checkProp];
+  else return 'Not Found';
+}
+// console.log(checkObj(lookup, 'mejla'));
