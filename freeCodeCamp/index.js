@@ -448,3 +448,77 @@ do {
   myArray1.push(ii);
   ii++;
 } while (ii < 5);
+
+function sum(arr, n) {
+  if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+}
+
+const contacts = [
+  {
+    firstName: 'Akira',
+    lastName: 'Laine',
+    number: '0543236543',
+    likes: ['Pizza', 'Coding', 'Brownie Points'],
+  },
+  {
+    firstName: 'Harry',
+    lastName: 'Potter',
+    number: '0994372684',
+    likes: ['Hogwarts', 'Magic', 'Hagrid'],
+  },
+  {
+    firstName: 'Sherlock',
+    lastName: 'Holmes',
+    number: '0487345643',
+    likes: ['Intriguing Cases', 'Violin'],
+  },
+  {
+    firstName: 'Kristian',
+    lastName: 'Vos',
+    number: 'unknown',
+    likes: ['JavaScript', 'Gaming', 'Foxes'],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop];
+      } else {
+        // return 'No such property';
+        return (contacts[i][prop] = prop);
+      }
+    }
+  }
+  return 'No such contact';
+}
+
+// console.log(lookUpProfile('Akira', 'likes'));
+// console.log(lookUpProfile('Akira', 'lastName'));
+// console.log(lookUpProfile('Akira', 'bla'));
+// console.log(lookUpProfile('Mejla', 'likes'));
+
+// console.log(contacts);
+
+function randomFraction() {
+  return Math.random();
+}
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+convertToInteger('56');
