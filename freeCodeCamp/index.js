@@ -522,3 +522,4 @@ function convertToInteger(str) {
 }
 
 convertToInteger('56');
+//sta li se desava
